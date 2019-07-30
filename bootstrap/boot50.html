@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assn50</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+		
+		body{
+			position: relative;
+		}
+		.affix{
+			top:20px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="jumbotron">
+					<h1>Bootstrap Affix</h1> 
+				</div>
+			</div>
+			<div class="col-xs-3">
+				<nav  id="mainNavbar">
+	
+		<div class="navbar-collapse collapse">
+			<ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="200">
+				<li class="active"><a href="#divDesert">Home</a></li>
+				<li><a href="#divJellyfish">Contact</a></li>
+				<li><a href="#divLighthouse">About</a></li>
+				
+
+			</ul>
+			</div>
+			
+		
+	</nav>
+				
+			</div>
+				<div class="col-xs-9">
+					<div id="divDesert" >
+			<h1>Desert</h1>
+			<img src="Desert.jpg" class="img-responsive">
+			</div>
+			  <div id="divJellyfish">
+			<h1>Jellyfish</h1>
+			<img src="Jellyfish.jpg" class="img-responsive">
+			</div>
+			  <div id="divLighthouse">
+			<h1>Lighthouse</h1>
+			<img src="Lighthouse.jpg" class="img-responsive">
+			</div>
+			  
+					
+				
+			</div>
+		</div>
+	</div>
+	
+		<script type="text/javascript">
+				$(document).ready(function(){
+					$('body').scrollspy({
+						target:'#mainNavbar',
+						offset:10
+					});
+				});
+			</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var a="undefined";
+		$(document).ready( () => {
+			$('#btn1').click( () => {
+				id = $('#txt1').val()
+				$.ajax({
+					url:'http://dummy.restapiexample.com/api/v1/employee/'+id,
+					type: 'GET',
+					success: function(data) {
+						if (data != "false") {
+							empObj = JSON.parse(data);
+							//console.log(empObj);
+								$('table').append('<tr background-color="red"><td>'+empObj.id+'</td><td>'
+							                 +empObj.employee_name+'</td><td>'
+							                 +empObj.employee_salary+'</td><td>'
+							                 +empObj.employee_age+'</td><td>'+'NO IMAGE </td></tr>'
+							                 );
+						} else {
+							$('table').append('<tr><td>'+a+'</td><td>'
+							                 +a+'</td><td>'
+							                 +a+'</td><td>'
+							                 +a+'</td><td>'+a +'</td></tr>'
+							                 );
+
+						}
+					}, 
+					error: function(err) {
+						console.log(err);
+
+					
+					} 
+				});
+			});
+		});
+		
+	</script>
+</head>
+<body>
+	<style type="text/css">
+		table{
+			
+			border-collapse: collapse;
+		}
+		th,td{
+			border:solid black;
+			padding: 5px
+		}
+
+thead{
+	background-color: #a0a0a0;
+
+}
+
+
+
+		
+	</style>
+<form>
+		<input type="text" id="txt1">
+		<button id="btn1" type="button">get data</button>
+	</form>
+	
+	<table cellspacing="10" border="1" class="clr" >
+		
+		<thead>
+			<td>Employee id</td>
+			<td>Employee Name</td>
+			<td>Employee Salary</td>
+			<td>Employee Age</td>
+			<td>Profile Image</td>
+		</thead>
+	</table>
+</body>
+</html>

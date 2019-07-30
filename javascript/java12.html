@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<h2>Global</h2>
+	<script type="text/javascript">
+		var champ="apple "
+		function printchamp()
+		{
+			document.write(champ +"inside the function"+"<br>","<br>");
+		}
+		printchamp();
+		document.write(champ+"outside the function"+"<br>");
+
+	</script>
+</head>
+<body>
+	<h2>local</h2>
+	<script type="text/javascript">
+		
+		function printchamp()
+		{
+			var champ="apple "
+			document.write(champ+ "inside the function"+"<br>","<br>");
+		}
+		printchamp();
+		
+	</script>
+
+</body>
+</html>

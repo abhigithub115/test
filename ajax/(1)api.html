@@ -1,0 +1,61 @@
+  
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$.ajax({
+
+				url:'http://dummy.restapiexample.com/api/v1/employees',
+				type:'GET',
+				data:{},
+				success:function(employees){
+					//console.log(employees);
+					employees_obj=JSON.parse(employees);
+					//console.log(employees_obj[0].id)
+					for(emp=0;emp<employees_obj.length;emp++){
+						$('table').append(
+							               '<tr><td>'+employees_obj[emp].id+'</td><td>'
+							                 +employees_obj[emp].employee_name+'</td><td>'
+							                 +employees_obj[emp].employee_salary+'</td><td>'
+							                 +employees_obj[emp].employee_age+'</td><td>'+'NO IMAGE </td></tr>'
+							                 );
+
+					}
+
+				},
+				error:function(error){
+					console.log(error);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<style type="text/css">
+	table{
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+	th,td{
+		border:solid black;
+		padding: 5px;
+	}
+	thead{
+		background-color: #a0a0a0;
+	}
+</style>
+	<table  border="1">
+		<thead>
+			<td>Employee id</td>
+			<td>Employee Name</td>
+			<td>Employee Salary</td>
+			<td>Employee Age</td>
+			<td >Profile Image</td>
+		</thead>
+	</table>
+
+</body>
+</html>

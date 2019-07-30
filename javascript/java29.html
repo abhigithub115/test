@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function anotherpage(){
+			username=document.getElementById("uname").value;
+			password=document.getElementById("pass").value;
+			if (username=="abhi" && password=="abhi123"){
+				return true;
+		           }
+				else{
+					alert("username=abhi & password=abhi123");
+					return false;
+
+				}
+			}
+			
+		
+	</script>
+</head>
+<body>
+<form action="another29.html" method="POST" onsubmit="return anotherpage();">
+  Name: <input type="text" value="" id="uname">
+  Password :<input type="text" id="pass"><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="submit" value="login">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<script type="text/javascript">
+ 			var subject=new Array("english","maths","science","social","chemistry");
+ 			function student(){
+
+ 				subject[0]=90;
+ 				subject[1]=59;
+ 				subject[2]=89;
+ 				subject[3]=78;
+ 				subject[4]=68;
+ 				
+ 				totmark1=subject[0]+subject[1]+subject[2]+subject[3]+subject[4];
+ 				
+ 				p=(totmark1*100)/500;
+ 				document.write("percentage is "+p+"<br>");
+ 				if (p>=60) {
+ 					document.write("student is passed the examination");
+ 				}
+ 				else{
+ 					document.write("failed");
+ 				}
+ 			}
+ 	</script>
+ 	<title></title>
+ </head>
+ <body>
+ 	<input type="button" name="btn" value="click me" onclick="student()">
+ 
+ </body>
+ </html>

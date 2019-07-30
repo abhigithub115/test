@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function check_box(){
+			var a=document.getElementById('g').checked;
+			var b=document.getElementById('p').checked;
+			if(a == false && b == false){
+			 //alert("bsh");
+				document.getElementById('cbox').innerHTML="please choose your qualification";
+				document.getElementById('cbox').style.color="red";
+				return false;
+
+			}else{
+				return true;
+			}
+		}
+	</script>
+	<style type="text/css">
+		.next{
+			background-color: aquamarine;
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+	<form class="next" name="cb_check" action="java3201.html" method="POST" onsubmit="return check_box();">
+		<h1 align="center"> Check box validtion</h1>
+		<table>
+			<tr>
+				<td><b>Qualification<b></td>
+				<td>Graduation<input type="checkbox" name="qualification" value="Graduate" id="g">Postgraduation<input type="checkbox" name="qualification" value="postgraduation" id="p"></td>
+			</tr>
+			<tr><td></td>
+				<td><label id="cbox"></label></td></tr>
+				<tr>
+					<td align="center"><input type="submit" value="submit"></td>
+				</tr>
+		</table>
+	</form>
+
+</body>
+</html> 

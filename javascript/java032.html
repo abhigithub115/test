@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function check_radio(){
+
+			 
+         gndr=document.go.gender.value;
+         if (gndr=="") {
+            document.getElementById("C_gender").innerHTML="please choose gender";
+            document.getElementById("C_gender").style.color="red";
+
+
+          return false;
+      }
+          else{
+          	return true;
+          }
+          }
+       
+
+
+		
+	</script>
+	<style type="text/css">
+		.next{
+			background-color: aquamarine;
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+	    <form class="next" name="go" action="java3101.html"  method="POST" onsubmit="return check_radio()" >
+		<h1 align="center">Radio Button Validation</h1>
+		<table>
+		<tr>
+	
+	<td><label>Gender</label></td>
+	<td><label id="C_gender1"><input type="radio" name="gender"value="male">Male
+      <input type="radio" name="gender" value="female">Female
+   </label></td></tr>
+   <tr><td><label id="C_gender"></label></td></tr>
+    
+			
+			<tr>
+			<td align="center"><input type="submit" value="submit"></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>

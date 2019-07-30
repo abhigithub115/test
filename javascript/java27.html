@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function display(){
+			 var name=document.getElementById('name').value;
+			 var last=document.getElementById('last').value;
+			 var email=document.getElementById('email').value;
+			   
+		     document.getElementById("txt").innerHTML="welcome "+name+  "<br>  " +last+"<br>" + "  Your email id is:  " +email;
+
+
+
+
+		}
+	</script>
+</head>
+<body>
+	
+	<form>
+		First Name<input type="text" id="name"/><br>
+		<br>
+		Last Name<input type="text" id="last"><br> 
+		<br>
+		Email Id<input type="text" id="email" ><br>
+		<br>
+		Password<input type="Password" id="Password"><br>
+		<br>
+		<input type="button" name="btn" value="DONE" onclick="display();">
+	</form>
+<p id="txt"></p>
+</body>
+</html>

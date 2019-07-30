@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		var subject=new Array("english","maths","science");
+
+		function student(){
+			subject[0]=20;
+			subject[1]=30;
+			subject[2]=40;
+			document.write("mark of arun: "+subject[0]+","+subject[1]+","+subject[2]+"<br>");
+
+			totmark=subject[0]+subject[1]+subject[2];
+			document.write("total mark is:"+totmark+"<br>");
+			subject[0]=30;
+			subject[1]=34;
+			subject[2]=50;
+			document.write("mark of jishnu"+subject[0]+","+subject[1]+","+subject[2]+"<br>");
+			totmark2=subject[0]+subject[1]+subject[2];
+			document.write("total mark is:"+totmark2+"<br>");
+
+		
+		if(totmark<totmark2){
+		
+			totmark3=totmark2-totmark;
+			document.write("jishnu has got "+totmark3+" mark more than arun");
+		}
+	}
+		
+	</script>
+</head>
+<body>
+	<form>
+	<input type="button" name="btn" value="click" onclick="student()">
+</form>
+</body>
+</html>

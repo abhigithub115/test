@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$.ajax({
+
+				 url:'http://dummy.restapiexample.com/api/v1/employee/88720',
+				 type:'GET',
+				 data:{},
+				 success:function(employee){
+				 	console.log(employee);
+				 	employee_obj=JSON.parse(employee);{
+				 	$('table').append(
+				 		                '<tr><td>'+employee_obj[''].id+'</td><td>'
+							                 +employee_obj[''].employee_name+'</td><td>'
+							                 +employee_obj[''].employee_salary+'</td><td>'
+							                 +employee_obj[''].employee_age+'</td><td>'+'NO IMAGE </td></tr>');
+				 
+				 }
+				},
+				error:function(error){
+					console.log(error);
+				}
+			});
+		});
+		
+	</script>
+</head>
+<body>
+	<form>
+		<input type="text" name="txt">
+		<input type="submit" name="submit" onclick="employee_obj();">
+	</form>
+	
+	<table cellspacing="10" border="1">
+		<tr>
+			<th>Employee id</th>
+			<td>Employee Name</td>
+			<th>Employee Salary</th>
+			<td>Employee Age</td>
+			<td>Profile Image</td>
+		</tr>
+	</table>
+
+</body>
+</html>
